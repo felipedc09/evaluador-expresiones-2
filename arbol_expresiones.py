@@ -59,11 +59,14 @@ def obtenerVariable(clave):
         return valor
 
 
-writeInFile('expresiones.out', "Expresiones / Resultados")
+writeInFile('expresiones.out', "Expresiones")
+
 for exp in readLinesFile('expresiones.in'):
     listExp = exp.strip('\n').split(' ')
     # print(listExp)
     pila = Pila()
     convertir(listExp, pila)
     appendInFile('expresiones.out', str(listExp))    
+
+appendInFile('expresiones.out', "Resultados")
 appendInFile('expresiones.out', str(variables))
